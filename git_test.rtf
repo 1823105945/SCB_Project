@@ -1,0 +1,575 @@
+{\rtf1\ansi\ansicpg936\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red180\green36\blue25;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21780\viewh11760\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs30 \cf0 \CocoaLigature0 Last login: Sat Nov 22 19:14:03 on ttys000\
+jay:~ lixiang$ ssh-keygen -t rsa -C \'93gengruijie@idol001.com\'94\
+Generating public/private rsa key pair.\
+Enter file in which to save the key (/Users/lixiang/.ssh/id_rsa): idol_ios_git\
+Enter passphrase (empty for no passphrase): \
+Enter same passphrase again: \
+Your identification has been saved in idol_ios_git.\
+Your public key has been saved in idol_ios_git.pub.\
+The key fingerprint is:\
+0c:8a:26:3d:52:80:65:ec:2e:8c:cb:cd:fd:76:48:6e \'93gengruijie@idol001.com\'94\
+The key's randomart image is:\
++--[ RSA 2048]----+\
+|ooo              |\
+|.o.              |\
+| ..   .          |\
+| o.. . o         |\
+|=.= .   S        |\
+|o=..   .         |\
+|.oo . o .        |\
+|.. o . E .       |\
+|      +..        |\
++-----------------+\
+jay:~ lixiang$ ssh-add ~/idol_ios_git\
+Identity added: /Users/lixiang/idol_ios_git (/Users/lixiang/idol_ios_git)\
+jay:~ lixiang$ ssh -T git@192.168.1.100:ios.git\
+ssh: Could not resolve hostname 192.168.1.100:ios.git: nodename nor servname provided, or not known\
+jay:~ lixiang$ ssh -T git@192.168.1.100:ios.git,\
+ssh: Could not resolve hostname 192.168.1.100:ios.git,: nodename nor servname provided, or not known\
+jay:~ lixiang$ ssh -T git@192.168.1.100:ios.git\
+ssh: Could not resolve hostname 192.168.1.100:ios.git: nodename nor servname provided, or not known\
+jay:~ lixiang$ ssh -T git@192.168.1.100:ios.git\
+ssh: Could not resolve hostname 192.168.1.100:ios.git: nodename nor servname provided, or not known\
+jay:~ lixiang$ ping 192.168.1.100\
+PING 192.168.1.100 (192.168.1.100): 56 data bytes\
+64 bytes from 192.168.1.100: icmp_seq=0 ttl=64 time=1.180 ms\
+64 bytes from 192.168.1.100: icmp_seq=1 ttl=64 time=0.488 ms\
+64 bytes from 192.168.1.100: icmp_seq=2 ttl=64 time=0.387 ms\
+^C\
+--- 192.168.1.100 ping statistics ---\
+3 packets transmitted, 3 packets received, 0.0% packet loss\
+round-trip min/avg/max/stddev = 0.387/0.685/1.180/0.352 ms\
+jay:~ lixiang$ ping 192.168.1.100\
+jay:~ lixiang$ ssh -T git@192.168.1.100:ios.git\
+^C\
+jay:~ lixiang$ cd /Users/lixiang/Desktop/git_ios \
+jay:git_ios lixiang$ git clone git@192.168.1.100:ios.git\
+Cloning into 'ios'...\
+warning: You appear to have cloned an empty repository.\
+Checking connectivity... done.\
+jay:git_ios lixiang$ git add .\
+fatal: Not a git repository (or any of the parent directories): .git\
+jay:git_ios lixiang$ cd ios/\
+jay:ios lixiang$ ll\
+-bash: ll: command not found\
+jay:ios lixiang$ ls\
+IMG_0881.jpg\
+jay:ios lixiang$ git add .\
+jay:ios lixiang$ git commit -m "test"\
+[master (root-commit) 167e917] test\
+ Committer: idol <lixiang@jay.local>\
+Your name and email address were configured automatically based\
+on your username and hostname. Please check that they are accurate.\
+You can suppress this message by setting them explicitly:\
+\
+    git config --global user.name "Your Name"\
+    git config --global user.email you@example.com\
+\
+After doing this, you may fix the identity used for this commit with:\
+\
+    git commit --amend --reset-author\
+\
+ 2 files changed, 0 insertions(+), 0 deletions(-)\
+ create mode 100644 .DS_Store\
+ create mode 100644 IMG_0881.jpg\
+jay:ios lixiang$ git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+No refs in common and none specified; doing nothing.\
+Perhaps you should specify a branch such as 'master'.\
+fatal: The remote end hung up unexpectedly\
+error: failed to push some refs to 'git@192.168.1.100:ios.git'\
+jay:ios lixiang$ ls\
+IMG_0881.jpg\
+jay:ios lixiang$ git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+No refs in common and none specified; doing nothing.\
+Perhaps you should specify a branch such as 'master'.\
+fatal: The remote end hung up unexpectedly\
+error: failed to push some refs to 'git@192.168.1.100:ios.git'\
+jay:ios lixiang$ git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+No refs in common and none specified; doing nothing.\
+Perhaps you should specify a branch such as 'master'.\
+fatal: The remote end hung up unexpectedly\
+error: failed to push some refs to 'git@192.168.1.100:ios.git'\
+jay:ios lixiang$ ls\
+IMG_0881.jpg\
+jay:ios lixiang$ cd ..\
+jay:git_ios lixiang$ git clone git@192.168.1.100:ios.git\
+fatal: destination path 'ios' already exists and is not an empty directory.\
+jay:git_ios lixiang$ git clone git@192.168.1.100:ios.git\
+fatal: destination path 'ios' already exists and is not an empty directory.\
+jay:git_ios lixiang$ git clone git@192.168.1.100:ios.git\
+Cloning into 'ios'...\
+warning: You appear to have cloned an empty repository.\
+Checking connectivity... done.\
+jay:git_ios lixiang$ cd ios\
+jay:ios lixiang$ git push /Users/lixiang/Desktop/IMG_0881.jpg\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+fatal: Invalid gitfile format: /Users/lixiang/Desktop/IMG_0881.jpg\
+fatal: Could not read from remote repository.\
+\
+Please make sure you have the correct access rights\
+and the repository exists.\
+jay:ios lixiang$ git push origin master\
+error: src refspec master does not match any.\
+error: failed to push some refs to 'git@192.168.1.100:ios.git'\
+jay:ios lixiang$ ls\
+jay:ios lixiang$ ls\
+IMG_0881.jpg\
+jay:ios lixiang$ git add .\
+jay:ios lixiang$ git commit -m "test"\
+[master (root-commit) 1d2686e] test\
+ Committer: idol <lixiang@jay.local>\
+Your name and email address were configured automatically based\
+on your username and hostname. Please check that they are accurate.\
+You can suppress this message by setting them explicitly:\
+\
+    git config --global user.name "Your Name"\
+    git config --global user.email you@example.com\
+\
+After doing this, you may fix the identity used for this commit with:\
+\
+    git commit --amend --reset-author\
+\
+ 1 file changed, 0 insertions(+), 0 deletions(-)\
+ create mode 100644 IMG_0881.jpg\
+jay:ios lixiang$ git push origin master\
+Counting objects: 3, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (2/2), done.\
+Writing objects: 100% (3/3), 1.78 MiB | 0 bytes/s, done.\
+Total 3 (delta 0), reused 0 (delta 0)\
+To git@192.168.1.100:ios.git\
+ * [new branch]      master -> master\
+jay:ios lixiang$ git add .\
+jay:ios lixiang$ git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Everything up-to-date\
+jay:ios lixiang$ ls\
+IMG_0881.jpg	Jay_Chou\
+jay:ios lixiang$ git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Everything up-to-date\
+jay:ios lixiang$ git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Everything up-to-date\
+jay:ios lixiang$ git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Everything up-to-date\
+jay:ios lixiang$ ls\
+IMG_0881.jpg	Jay_Chou\
+jay:ios lixiang$ git add .\
+jay:ios lixiang$ git add ,\
+fatal: pathspec ',' did not match any files\
+jay:ios lixiang$ git add .\
+jay:ios lixiang$ git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Everything up-to-date\
+jay:ios lixiang$ git help\
+usage: git [--version] [--help] [-C <path>] [-c name=value]\
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]\
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\
+           <command> [<args>]\
+\
+The most commonly used git commands are:\
+   add        Add file contents to the index\
+   bisect     Find by binary search the change that introduced a bug\
+   branch     List, create, or delete branches\
+   checkout   Checkout a branch or paths to the working tree\
+   clone      Clone a repository into a new directory\
+   commit     Record changes to the repository\
+   diff       Show changes between commits, commit and working tree, etc\
+   fetch      Download objects and refs from another repository\
+   grep       Print lines matching a pattern\
+   init       Create an empty Git repository or reinitialize an existing one\
+   log        Show commit logs\
+   merge      Join two or more development histories together\
+   mv         Move or rename a file, a directory, or a symlink\
+   pull       Fetch from and integrate with another repository or a local branch\
+   push       Update remote refs along with associated objects\
+   rebase     Forward-port local commits to the updated upstream head\
+   reset      Reset current HEAD to the specified state\
+   rm         Remove files from the working tree and from the index\
+   show       Show various types of objects\
+   status     Show the working tree status\
+   tag        Create, list, delete or verify a tag object signed with GPG\
+\
+'git help -a' and 'git help -g' lists available subcommands and some\
+concept guides. See 'git help <command>' or 'git help <concept>'\
+to read about a specific subcommand or concept.\
+jay:ios lixiang$ ls\
+IMG_0881.jpg	Jay_Chou\
+jay:ios lixiang$ git commit\
+\
+[1]+  Stopped                 git commit\
+jay:ios lixiang$ \
+jay:ios lixiang$ git add .\
+jay:ios lixiang$ git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Everything up-to-date\
+jay:ios lixiang$ git push jay_chou\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+To jay_chou\
+ ! [rejected]        master -> master (fetch first)\
+error: failed to push some refs to 'jay_chou'\
+hint: Updates were rejected because the remote contains work that you do\
+hint: not have locally. This is usually caused by another repository pushing\
+hint: to the same ref. You may want to first integrate the remote changes\
+hint: (e.g., 'git pull ...') before pushing again.\
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.\
+jay:ios lixiang$ git push \
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Everything up-to-date\
+jay:ios lixiang$ ls\
+IMG_0881.jpg	Jay_Chou	
+\f1 \'ce\'b4\'b1\'ea\'cc\'e2
+\f0 -1.png\
+jay:ios lixiang$ git add .\
+jay:ios lixiang$ git?\
+-bash: git?: command not found\
+jay:ios lixiang$ git push \
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Everything up-to-date\
+jay:ios lixiang$ cd ..\
+jay:git_ios lixiang$ cd..\
+-bash: cd..: command not found\
+jay:git_ios lixiang$ cd..\
+-bash: cd..: command not found\
+jay:git_ios lixiang$ cd ..\
+jay:Desktop lixiang$ cd /Users/lixiang/Desktop/git_ios/ios\
+jay:ios lixiang$ git add .\
+jay:ios lixiang$ git push \
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+When push.default is set to 'matching', git will push local branches\
+to the remote branches that already exist with the same name.\
+\
+In Git 2.0, Git will default to the more conservative 'simple'\
+behavior, which only pushes the current branch to the corresponding\
+remote branch that 'git pull' uses to update the current branch.\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Everything up-to-date\
+jay:ios lixiang$ git push origin master\
+Everything up-to-date\
+jay:ios lixiang$ git add .\
+jay:ios lixiang$ git commit -m "jay_text"\
+[master f06e868] jay_text\
+ Committer: idol <lixiang@jay.local>\
+Your name and email address were configured automatically based\
+on your username and hostname. Please check that they are accurate.\
+You can suppress this message by setting them explicitly:\
+\
+    git config --global user.name "Your Name"\
+    git config --global user.email you@example.com\
+\
+After doing this, you may fix the identity used for this commit with:\
+\
+    git commit --amend --reset-author\
+\
+ 3 files changed, 1 insertion(+)\
+ create mode 100644 .DS_Store\
+ create mode 160000 Jay_Chou\
+ create mode 100644 "\\346\\234\\252\\346\\240\\207\\351\\242\\230-1.png"\
+jay:ios lixiang$ git push origin master\
+Counting objects: 5, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (4/4), done.\
+Writing objects: 100% (4/4), 4.02 KiB | 0 bytes/s, done.\
+Total 4 (delta 0), reused 0 (delta 0)\
+To git@192.168.1.100:ios.git\
+   1d2686e..f06e868  master -> master\
+jay:ios lixiang$ git add .\
+jay:ios lixiang$ git commit -m "jay_2"\
+On branch master\
+Your branch is up-to-date with 'origin/master'.\
+\
+Changes not staged for commit:\
+	\cf2 modified:   Jay_Chou\cf0  (modified content)\
+\
+no changes added to commit\
+jay:ios lixiang$ gti pull\
+-bash: gti: command not found\
+jay:ios lixiang$ git pull\
+Already up-to-date.\
+jay:ios lixiang$ \
+}

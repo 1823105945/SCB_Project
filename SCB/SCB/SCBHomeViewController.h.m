@@ -13,10 +13,38 @@
 @end
 
 @implementation SCBHomeViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.navigationController.navigationBarHidden=NO;
+    self.tabBarController.tabBar.hidden=NO;
+    
+    //     也可以用alloc构建这里用单利演示
+    [SCBNetworkRequest sharNetWork].delegate=self;
+    [[SCBNetworkRequest sharNetWork] NetworkRequseURL:@"http://183.61.183.115/thirdapi/app55ding.php/app/getFlagshipIndex/name/ninuo" NetworkRequseType:@"POST" CachePath:@"name"];
+    UIImageView *i=[[UIImageView alloc]initWithFrame:self.view.bounds];
+    //    [[SCBNetworkRequest sharNetWork]requstImageView:i ImageURL:<#(NSString *)#> PlaceholderImageName:<#(NSString *)#>];
+    [self.view addSubview:i];
+    
+}
+
+-(void)NetworkRequestSuccess:(NSDictionary *)Dictionary
+{
+    NSLog(@"%@",Dictionary);
+}
+
+-(void)NetworkRequestFailure:(NSDictionary *)Dictionary
+{
+    NSLog(@"%@",Dictionary);
+}
+
+-(void)POSTNetworkRequest:(ASIFormDataRequest *)Request
+{
+    
+}
+-(void)dealloc
+{
+    [[SCBNetworkRequest sharNetWork]CancelRequest];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,4 +66,5 @@
  移除网络指示器
  [HUD removeFromSuperview];
  */
+
 @end

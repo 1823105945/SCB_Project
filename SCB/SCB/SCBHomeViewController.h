@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SCBNetworkRequest.h"
 
-@interface SCBHomeViewController : UIViewController
+@interface SCBHomeViewController : UIViewController<SCBNetworkRequestDelegate>
 
 
 @end

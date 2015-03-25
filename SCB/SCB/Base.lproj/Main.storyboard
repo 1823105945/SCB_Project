@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="-1339" y="-56"/>
         </scene>
-        <!--View Controller-->
+        <!--Sort View Controller-->
         <scene sceneID="Avv-bA-cVb">
             <objects>
-                <viewController id="hqZ-8Z-K6q" sceneMemberID="viewController">
+                <viewController id="hqZ-8Z-K6q" customClass="SCBSortViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3vl-Bs-iL6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="-1333" y="570"/>
         </scene>
-        <!--View Controller-->
+        <!--Order View Controller-->
         <scene sceneID="kZ8-Wi-PEN">
             <objects>
-                <viewController id="kG0-Mb-smt" sceneMemberID="viewController">
+                <viewController id="kG0-Mb-smt" customClass="SCBOrderViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OGA-kS-JK0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="-1403" y="1337"/>
         </scene>
-        <!--View Controller-->
+        <!--Personal Center View Controller-->
         <scene sceneID="qoR-G1-9YL">
             <objects>
-                <viewController id="GeL-wY-t82" sceneMemberID="viewController">
+                <viewController id="GeL-wY-t82" customClass="SCBPersonalCenterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nri-hk-GmG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
